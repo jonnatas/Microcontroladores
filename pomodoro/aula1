@@ -1,0 +1,35 @@
+diogogarcia@unb.com.br
+
+1)O que ação sistemas embarcados?
+
+Um sistema embarcado é um computador embutido construído com a finalidade especifica da sua aplicação, sendo que ao contrario de computadores convencionais os sistemas embarcados tem os seus recursos voltados para o dispositivo que o mesmo controla.  
+
+Deste modo um sistema embarcado realiza uma serie de atividades predefinidas, não podendo ser alteradas durante a sua execução, podendo assim, ao projetar um sistema embarcado reduzir recursos computacionais, reorganizar outros recursos, otimizar tamanho entre outros, otimizando de acordo a tarefa proposta;
+
+
+2)O que são microprocessadores?
+O microprocessador (também conhecidos como processador), é talvez o principal dispositivo do computador atuando como o "cérebro" do sistema, controlando as instruções como um todo.
+
+Ou seja é um circuito integrado que realiza as funções de cálculo e demais tomadas de decisão do computador.
+
+3)Apresente aplicações de sistemas embarcados;
+	a) Para a industria automóvel;
+		Computador de Bordo, Sistema de controle de tração autônomo, Sistema de frenagem automáticos, sistema de controle digital de aceleração.
+	b) Para eletrodomésticos;
+		Micro-ondas, Geladeira, SmartTV.
+	c) Para automação industrial;
+		Sistema autônomo de criação de montagem de peças automotivas, montagem em geral de equipamentos, sistemas de monitoramento.
+
+4)Cite arquiteturas possíveis e as diferenças entre elas;
+
+ARM (Advanced RISC Machine): Arquitetura de 32 bits, utilizada principalmente em sistemas embarcados, tem como finalidade a simplificação das instruções para assim atingir a máxima eficiência., estes processadores são conhecidos pela sua versatilidade ao possuírem poucas instruções, são encontrados em celulares calculadoras etc.
+
+RISC (Reduced Instruction Set Computer): tem um conjunto simples e pequeno de instruções.
+
+x86_64: Arquitetura mais robusta, desenvolvida para processadores de alto desempenho para notebooks e desktops, dentre os seus processadores tem-se arquiteturas com 32 ou 64 bits.
+
+	
+5)Porquê usamos o MSP340 na disciplina, ao invés de outro microcontrolador.
+Além de ser barato e com recursos bem interessantes, possui os recursos de hardware necessários para um iniciante ser introduzido na área dos sistemas embarcados.
+
+Além de possuir um baixo consumo elétrico.
