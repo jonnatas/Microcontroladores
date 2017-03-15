@@ -7,6 +7,7 @@ Q1. Quais as diferenças entre os barramentos de dados e de endereços?
   Barramento de endereços:
     Já o barramento de endereços possui outra proposta de funcionamento, tem por função realizar o transporte do "endereço" onde se pretende ler ou escrever algun dado.
 
+    Assim ele usado para selecionar a origem ou destino de sinais transmitidos num dos outros barramentos ou numa de suas linhas. Ele conduz endereços. Uma função típica do Barramento de Endereço é selecionar um registrador num dos dispositivos do sistema que é usado como a fonte ou o destino do dado.
 
 Q2. Quais são as diferenças entre as memórias RAM e ROM?
 
@@ -28,6 +29,8 @@ Q3. Considere o código abaixo, de 12 linhas:
 Para este código, responda:
 	(a) A variável 'i' é armazenada na memória RAM ou ROM? Por quê?
     Ná memoria ROM, não existe nenhuma instrução para o armazenamento na mémoria ROM, assim depois que o programa for execultado os valores de 'i' são deletados.
+
+
 
 	(b) O programa compilado a partir deste código é armazenado na memória RAM ou ROM? Por quê?
 
