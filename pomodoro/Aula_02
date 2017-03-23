@@ -10,6 +10,14 @@ Q1. Quais as diferenças entre os barramentos de dados e de endereços?
     Assim ele usado para selecionar a origem ou destino de sinais transmitidos num dos outros barramentos ou numa de suas linhas. Ele conduz endereços. Uma função típica do Barramento de Endereço é selecionar um registrador num dos dispositivos do sistema que é usado como a fonte ou o destino do dado.
 
 Q2. Quais são as diferenças entre as memórias RAM e ROM?
+  RAM: memória RAM (Random Access Memory), é uma mémoria de ascesso rápido, volatil, utilizada como auxilio na execução de processos, se o dispositivo for desligado os dados salvos nesta memória são perdidos. 
+
+  A memória RAM, é uma memória de acesso randômico, ou seja pode ser acessada a qualquer momento para carregar ou sobrescrever informações com extrema rapidez 
+
+  ROM: memória ROM (Read Only Memory) em tese permite uma unica gravação dos dados, não sendo possível apagar ou editar estes dados.
+
+  É utilizada principalmente na inicialização do sistema.
+
 
 Q3. Considere o código abaixo, de 12 linhas:
 
@@ -28,16 +36,29 @@ Q3. Considere o código abaixo, de 12 linhas:
 
 Para este código, responda:
 	(a) A variável 'i' é armazenada na memória RAM ou ROM? Por quê?
-    Ná memoria ROM, não existe nenhuma instrução para o armazenamento na mémoria ROM, assim depois que o programa for execultado os valores de 'i' são deletados.
-
-
+    Ná memoria RAM, a memória ROM é apenas de leitura.
 
 	(b) O programa compilado a partir deste código é armazenado na memória RAM ou ROM? Por quê?
+    Na memória RAM, porém somente enquanto o computador estiver ligado, após o desligamento os dados perdidos.
+
 
 Q4. Quais são as diferenças, vantagens e desvantagens das arquiteturas Harvard e Von Neumann?
 
+Arquitetura tipo Harvard: Caminhos de dados e de instrução distintos.
+
+Já na arquitetura Von-Neumann, é processada uma única informação por vez, visto que nessa tecnologia, execução e dados percorrem o mesmo barramento, o que torna o processo lento em relação à arquitetura Harvard. 
+
 Q5. Considere a variável inteira 'i', armazenando o valor 0x8051ABCD. Se 'i' é armazenada na memória a partir do endereço 0x0200, como ficam este byte e os seguintes, considerando que a memória é:
 	(a) Little-endian?
+    0x0200* (ABCD)
+    0x0201 (8051)
+*endereço base
+
 	(b) Big-endian?
+    0x0200* (8051)
+    0x0201 (ABCD)
+*endereço base
 
 Q6. Sabendo que o processador do MSP430 tem registradores de 16 bits, como ele soma duas variáveis de 32 bits?
+
+como ele tem so 16 bits, e as variaveis tem no total 64 bits, é nescessario 4 ciclos no processador para execução do calculo.
