@@ -75,6 +75,8 @@ O jogador que tentava adivinhar a palavra antes então escolhe uma nova palavra 
 
 \section{Objetivo}
 Este projeto, objetiva-se projetar e construir do jogo da forca, utilizando um microcontrolador, \textit{MSP430}, estimulando o aprendizado de crianças que estejam come\c{c}ando a ler e a escrever.
+\subsection{Diferencial}
+Em um jogo fa forca normal, tem-se a propria forca em se, e a medida que o jogo evolui com o jogador errando as palavras existentes, um boneco é desenhado no espaço subsequente. Para deixar o jogo mais interesante, utilizando teremos um boneco real sobre um alçapão e casso o jogador perca o jogo o alçapão abre inforcando assim o boneco. 
 \section{Benefícios}
 
 A utilização de jogos educacionais para o aprendizado de crianças, pode ocasionar uma melhora acentuada no desenvolvimento destas crianças, uma vez que o fator lúdico motiva as crianças na construção do conhecimento transformando uma tarefa monótona em algo prazeroso.\cite{ambienteJ}
@@ -149,6 +151,5 @@ J. Correa,
 \end{thebibliography}
 
 \end{document}
-
 
 
