@@ -1,0 +1,154 @@
+\documentclass[12pt,journal,compsoc]{IEEEtran}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\ifCLASSOPTIONcompsoc
+\else
+  % normal IEEE
+  % \usepackage{cite}
+\fi
+
+\ifCLASSINFOpdf
+\else
+\fi
+
+\providecommand{\PSforPDF}[1]{#1}
+
+\newcommand\MYhyperrefoptions{bookmarks=true,bookmarksnumbered=true,
+pdfpagemode={UseOutlines},plainpages=false,pdfpagelabels=true,
+colorlinks=true,linkcolor={black},citecolor={black},pagecolor={black},
+urlcolor={black},
+pdftitle={Projeto de Forca eletronica utilizando MSP430},%<!CHANGE!
+pdfsubject={Typesetting},%<!CHANGE!
+pdfauthor={Michael D. Shell},%<!CHANGE!
+pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
+             template}}%<^!CHANGE!
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+
+\title{Projeto de Forca eletrônica utilizando MSP430}
+
+
+\author{Marcelo Martins, 13/0143928 \\
+        Jônnatas Lennon, 12/0122561
+}
+
+
+\markboth%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Advanced Demo of IEEEtran.cls for Journals}
+
+\maketitle
+
+
+\section{Introdução}
+
+\IEEEPARstart{j}{ogo} da forca é um jogo em que o jogador tem que acertar qual e a palavra proposta, tendo como dica o número de letras e o tema ligado à palavra. A cada letra errada, é desenhada uma parte do corpo do enforcado. 
+Para começar o jogo se desenha uma base e um risco correspondente ao lugar de cada letra.
+
+Por exemplo, para a palavra "CURSO", se escreve:
+
+C U R S O -  \_ \_ \_ \_ \_
+
+O jogador que tenta adivinhar a palavra deve ir dizendo as letras que podem existir na palavra. Cada letra que ele acerta é escrita no espaço correspondente.
+
+C U R S O -  C \_ \_ S O
+
+Caso a letra não exista nessa palavra, desenha-se uma parte do corpo
+
+O jogador pode escolher entre falar uma letra ou fazer uma tentativa perigosa de tentar adivinhar a palavra falando a palavra que pensa que é.
+
+Caso o jogador deseja fazer uma tentativa perigosa de tentar adivinhar a palavra falando a que pensa que é e fale a palavra errada ele perde na hora.
+
+O jogo é ganho se a palavra é adivinhada. Caso o jogador não descubra qual palavra é ele que perde.
+
+O jogador que tentava adivinhar a palavra antes então escolhe uma nova palavra e invertem-se os papéis.
+
+ 
+\hfill Abril 5, 2017
+
+\section{Objetivo}
+Este projeto, objetiva-se projetar e construir do jogo da forca, utilizando um microcontrolador, \textit{MSP430}, estimulando o aprendizado de crianças que estejam come\c{c}ando a ler e a escrever.
+\section{Benefícios}
+
+A utilização de jogos educacionais para o aprendizado de crianças, pode ocasionar uma melhora acentuada no desenvolvimento destas crianças, uma vez que o fator lúdico motiva as crianças na construção do conhecimento transformando uma tarefa monótona em algo prazeroso.\cite{ambienteJ}
+
+Quando interage com os jogos a criança melhora sua capacidade cognitiva, isto ocorre mesmo sem ela perceber, e também aumenta a capacidade de raciocínio lógico ao tentar adivinhar as palavras existentes, e também melhora a indução no raciocino ao levar a criança a buscar, organizar e identificar um sentido nas dicas geradas em cada etapa do jogo.
+
+O jogo da forca pode também influenciar no desenvolvimento social da criança, uma vez que é comum tal jogo ser jogado em grupos, nos quais existe uma cooperação para buscar de modo agradável e divertido a solução do problema.
+Ao inserir mecanismos digitais nestes jogos, a aprendizagem talvez fique ainda mais interessante, além de mesmo sem perceber\cite{ambienteJ}
+
+\section{Requisitos do Projeto}
+\subsection{Requisitos Funcionais}
+\begin{itemize}
+    \item RF01 - Exibir os espaços da palavra associada. 
+    \item RF02 - Atualizar os campos condizentes com palavra, inserindo a letra correspondente ao realizar o acerto, a medida que o jogo evolui.
+    \item RF03 - Informar a quantia de tentativas disponíveis. 
+    \item RF04 - Atualizar as tentativas, a cada rodada.
+    \item RF05 - Exibir a letra que o usuário escolheu antes da confirmação.
+    \item RF06 - Exibir mensagem com o status da vitória ou derrota.
+    \item RF07 - Armazenar as palavras que serão utilizadas.
+\end{itemize}
+\subsection{Requisitos Não Funcionais}
+\begin{itemize}
+    \item RNF01 - Organizar as teclas em 8 botões, obedecendo uma proporcionalidade entre eles.
+    \item RNF02 - Exibir a palavra e as letras de modo legível.
+    \item RNF03 - Utilização de um \textit{display} para exibição.
+    
+\begin{figure}[!htp]
+\centering
+\includegraphics{Figuras/Display.jpg} % leia abaixo
+\caption{Display}
+\label{Figuras:Display.jpg}
+\end{figure}    
+\end{itemize}
+
+
+
+%\section{Projeto}
+%\section{Resultados}
+%\section{Conclusion}
+
+
+%\appendices
+
+% you can choose not to have a title for an appendix
+% if you want by leaving the argument blank
+
+
+
+
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+
+\begin{thebibliography}{1}
+
+ \bibitem{ambienteJ}
+J. C. Anacleto
+, A. M. Ferreira, \emph{Anais do XXVIII Congresso da SBC}.\hskip 1em plus
+  0.5em minus 0.4em\relax Ambiente para criação de jogos educacionais de
+adivinhação baseados em cartas contextualizadas, 2008.
+
+ \bibitem{ambienteO}
+C. S. S. Curvelo,
+E. de S. M.,
+J. Correa,
+\emph{Psicologia: Reflexão e Crítica}.\hskip 1em plus
+  0.5em minus 0.4em\relax O conhecimento ortográfico da criança no jogo da forca, 1998.
+
+\end{thebibliography}
+
+\end{document}
+
+
+
