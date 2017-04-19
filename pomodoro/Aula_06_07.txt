@@ -81,7 +81,7 @@ POT_END: mov R5,R15
 		pop R5
 		pop R4
 		ret
-		
+
 3. Escreva uma sub-rotina na linguagem Assembly do MSP430 que calcula a divisão de 'a' por 'b', onde 'a', 'b' e o valor de saída são inteiros de 16 bits. 'a' e 'b' são fornecidos através dos registradores R15 e R14, respectivamente, e a saída deverá ser fornecida através do registrador R15.
 
 4. Escreva uma sub-rotina na linguagem Assembly do MSP430 que calcula o resto da divisão de 'a' por 'b', onde 'a', 'b' e o valor de saída são inteiros de 16 bits. 'a' e 'b' são fornecidos através dos registradores R15 e R14, respectivamente, e a saída deverá ser fornecida através do registrador R15.
@@ -96,6 +96,15 @@ POT_END: mov R5,R15
 O protótipo da função é:
 
 	unsigned long long DuploFatorial(unsigned long long n);
+	
+unsigned long long DuploFatorial(unsigned long long n){
+	return (n<=1) ? 1 : n*DuploFatorial(n-2);
+}
+
+int main(){
+	unsigned long long duplo = DuploFatorial(10);
+	printf("%d\n", duplo);
+}
 
 7. (a) Escreva uma função em C que calcula a função exponencial da seguinte forma:
 	
@@ -123,3 +132,7 @@ Se o vetor for palíndromo, retorne o valor 1. Caso contrário, retorne o valor 
 	}
 
 (b) Escreva a sub-rotina equivalente na linguagem Assembly do MSP430. O endereço do vetor de entrada é dado pelo registrador R15, o tamanho do vetor é dado pelo registrador R14, e o resultado é dado pelo registrador R15.
+
+
+
+
