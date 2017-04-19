@@ -21,9 +21,67 @@ O protótipo da função é:
 2. (a) Escreva uma função em C que calcule 'x' elevado à 'N'-ésima potência, seguindo o seguinte protótipo: 
 
 	int Potencia(int x, int N);
+	//Codigo C
+	{
+		int sign =0,p=1;
+		if( N<0 )
+		{
+			N = - N;
+			sign = 1;
+		}
+		while ( N>0 ){
 
+			p = Mult_Sign(x,p);
+			N --;
+		}
+		if(sign == 1){
+
+			return Div_Signed(1,p)
+		}else{
+			return p;
+		}
+	}
+
+
+		
 (b) Escreva a sub-rotina equivalente na linguagem Assembly do MSP430. 'x' e 'n' são fornecidos através dos registradores R15 e R14, respectivamente, e a saída deverá ser fornecida no registrador R15.
+#Codigo Assembly
 
+Potencia: push R4
+		  push R5
+ 		clr R4; sign = 0;
+		mov #1,R5; p=1;
+		cmp #0,R14
+		jge WHILE_POT
+		inv R14
+		mov #1,R4
+
+WHILE_POT: tst R14
+		jz WHILE_POT_END
+		push R15
+		push R14
+		mov R5,R14
+		call Mult_Signed
+		mov R15,R5
+		pop R14
+		pop R15
+		dec R14
+		jmp WHILE_POT
+
+WHILE_POT_END: cmp #1,R4
+		jne: POT_END
+		mov #1,R15
+		mov R5,R14
+		call Div_Signed
+		pop R5
+		pop R4
+		ret
+
+POT_END: mov R5,R15
+		pop R5
+		pop R4
+		ret
+		
 3. Escreva uma sub-rotina na linguagem Assembly do MSP430 que calcula a divisão de 'a' por 'b', onde 'a', 'b' e o valor de saída são inteiros de 16 bits. 'a' e 'b' são fornecidos através dos registradores R15 e R14, respectivamente, e a saída deverá ser fornecida através do registrador R15.
 
 4. Escreva uma sub-rotina na linguagem Assembly do MSP430 que calcula o resto da divisão de 'a' por 'b', onde 'a', 'b' e o valor de saída são inteiros de 16 bits. 'a' e 'b' são fornecidos através dos registradores R15 e R14, respectivamente, e a saída deverá ser fornecida através do registrador R15.
@@ -61,7 +119,7 @@ Se o vetor for palíndromo, retorne o valor 1. Caso contrário, retorne o valor 
 	int Palindromo(int vetor[ ], int tamanho);
 
 	int Palindromo(int vetor[], int tamanho){
-		return (vetor[0]==vetor[tamanho-1]);
+		return (vetor[0]==vetor[tamanho-1])*Palindromo((1+*vetor),tamanho-1);
 	}
 
 (b) Escreva a sub-rotina equivalente na linguagem Assembly do MSP430. O endereço do vetor de entrada é dado pelo registrador R15, o tamanho do vetor é dado pelo registrador R14, e o resultado é dado pelo registrador R15.
